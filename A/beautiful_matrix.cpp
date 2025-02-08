@@ -31,7 +31,7 @@ int main() {
 
 /* 
     The minimum integer distance between two points is 
-    the absolute difference between their co-ordinates.
+    the sum of absolute difference between their co-ordinates.
     Manhattan Distance Formula:
     d = |x1 - x2| + |y1 - y2|
 */
