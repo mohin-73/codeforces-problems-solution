@@ -5,12 +5,13 @@ import (
 )
 
 func main() {
-    m := make(map[string]int)
-    m["Tetrahedron"] = 4
-    m["Cube"] = 6
-    m["Octahedron"] = 8
-    m["Dodecahedron"] = 12
-    m["Icosahedron"] = 20
+    m := map[string]int {
+        "Tetrahedron": 4,
+        "Cube":        6,
+        "Octahedron":  8,
+        "Dodecahedron": 12,
+        "Icosahedron": 20,
+    }
 
     var n int
     p := 0
