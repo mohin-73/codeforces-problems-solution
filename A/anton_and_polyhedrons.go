@@ -14,14 +14,15 @@ func main() {
     }
 
     var n int
+    fmt.Scan(&n)
     p := 0
 
-    fmt.Scan(&n)
+    
     for n > 0 {
         var str string
         fmt.Scan(&str)
         p = p + m[str]
-        n--
+        n = n - 1
     }
 
     fmt.Println(p)
