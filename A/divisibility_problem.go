@@ -14,6 +14,7 @@ func main() {
         k = (a + b - 1) / b
         b = b * k
         fmt.Println(b - a)
-        t--
+        t = t - 1
     }
+
 }
