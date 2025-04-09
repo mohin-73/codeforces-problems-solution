@@ -9,9 +9,9 @@ func main() {
     fmt.Scan(&n)
 
     var p, q, k int
-    cnt := 0
     var arr[100]int
-
+    cnt := 0
+    
     fmt.Scan(&p)
     for p > 0 {
         fmt.Scan(&k)
@@ -19,7 +19,7 @@ func main() {
             cnt += 1
             arr[k - 1] = 1
         }
-        p--
+        p = p - 1
     }
 
     fmt.Scan(&q)
@@ -29,7 +29,7 @@ func main() {
             cnt += 1
             arr[k - 1] = 1
         }
-        q--
+        q = q - 1
     }
 
     if cnt == n {
@@ -37,4 +37,5 @@ func main() {
     } else {
         fmt.Println("Oh, my keyboard!")
     }
+
 }
