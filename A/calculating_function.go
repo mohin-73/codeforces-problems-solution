@@ -14,5 +14,4 @@ func main() {
         n = (0 - n - 1)
         fmt.Println(n / 2)
     }
-    
 }
