@@ -8,7 +8,7 @@ func main()  {
     var t int
     fmt.Scan(&t)
 
-    for t > 0 {
+    for i := 0; i < t; i += 1 {
         var n, k int64
         fmt.Scan(&n, &k)
 
@@ -18,6 +18,5 @@ func main()  {
         }
 
         fmt.Println(x)
-        t--
     }
 }
