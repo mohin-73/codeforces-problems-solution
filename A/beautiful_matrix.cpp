@@ -11,27 +11,21 @@ int main() {
     freopen("output.txt", "w", stdout);
 #endif
 
-    bool val;
-    int r, c;
-
+    int cell, row, col;
+    
     for (int i = 1; i <= 5; i += 1) {
         for (int j = 1; j <= 5; j += 1) {
-            cin >> val;
-            if (val == 1) {
-                r = i;
-                c = j;
+            cin >> cell;
+            if (cell == 1) {
+                row = i;
+                col = j;
             }
         }
     }
 
-    cout << abs(r - 3) + abs(c - 3) << '\n';
-    
+    cout << abs(row - 3) + abs(col - 3) << '\n';
+
     return 0;
 }
 
-/* 
-    The minimum integer distance between two points is 
-    the sum of absolute difference between their co-ordinates.
-    Manhattan Distance Formula:
-    d = |x1 - x2| + |y1 - y2|
-*/
+// Manhattan Distance = |x1 - x2| + |y1 - y2|
