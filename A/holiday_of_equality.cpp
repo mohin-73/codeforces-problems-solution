@@ -20,7 +20,7 @@ int main() {
         mx = max(mx, x);
     }
 
-    cout << mx * n - sum << '\n';
+    cout << (mx * n) - sum << '\n';
     
     return 0;
 }
