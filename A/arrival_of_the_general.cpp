@@ -14,26 +14,26 @@ int main() {
     int n;
     cin >> n;
 
-    int arr[n];
-    for (int i = 0; i < n; i += 1) {
-        cin >> arr[i];
+    vector<int> vec(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> vec[i];
     }
 
-    int low = arr[n - 1], high = arr[0];
-    int l = n - 1, h = 0;
+    int high = vec[0], h = 0;
+    int low = vec[n - 1], l = n - 1;
 
-    for (int i = 0; i < n; i += 1) {
-        if (arr[i] > high) {
-            high = arr[i];
+    for (int i = 0; i < n; ++i) {
+        if (vec[i] > high) {
+            high = vec[i];
             h = i;
         }
-        if (arr[i] <= low) {
-            low = arr[i];
+        if (vec[i] <= low) {
+            low = vec[i];
             l = i;
         }
     }
-    
-    int ans = h + n - l - 1;
+
+    int ans = h + (n - l - 1);
 
     if (h > l) {
         ans -= 1;
