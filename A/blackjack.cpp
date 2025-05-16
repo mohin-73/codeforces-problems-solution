@@ -16,13 +16,13 @@ int main() {
 
     n = n - 10;
 
-    if (n <= 0 or n > 11) {
+    if (n <= 0 || n > 11) {
         cout << 0 << '\n';
     } else if (n == 10) {
         cout << 15 << '\n';
     } else {
         cout << 4 << '\n';
     }
-    
+
     return 0;
 }
