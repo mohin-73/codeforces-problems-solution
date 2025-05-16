@@ -11,22 +11,25 @@ int main() {
     freopen("output.txt", "w", stdout);
 #endif
 
-    int y;
-    cin >> y;
+    int year;
+    cin >> year;
 
     while (true) {
-        int n = ++y;
-        set<int> s;
-        while (n) {
-            s.insert(n % 10);
-            n /= 10;
+        year += 1;
+        int temp = year;
+        set<int> digits;
+
+        while (temp) {
+            digits.insert(temp % 10);
+            temp /= 10;
         }
-        if (s.size() == 4) {
+
+        if (digits.size() == 4) {
             break;
         }
     }
 
-    cout << y << '\n';
-    
+    cout << year << '\n';
+
     return 0;
 }
