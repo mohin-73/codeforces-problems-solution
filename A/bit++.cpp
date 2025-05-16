@@ -17,7 +17,8 @@ int main() {
     while (n--) {
         string str;
         cin >> str;
-        if (str[0] == '+' or str[2] == '+') {
+
+        if (str[0] == '+' || str[2] == '+') {
             ans += 1;
         } else {
             ans -= 1;
