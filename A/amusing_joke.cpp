@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,12 +16,12 @@ int main() {
     string str1, str2, str3;
     cin >> str1 >> str2 >> str3;
 
-    string str = str1 + str2;
+    string str4 = str1 + str2;
 
-    sort(str.begin(), str.end());
     sort(str3.begin(), str3.end());
+    sort(str4.begin(), str4.end());
 
-    if (str == str3) {
+    if (str3 == str4) {
         cout << "YES\n";
     } else {
         cout << "NO\n";
