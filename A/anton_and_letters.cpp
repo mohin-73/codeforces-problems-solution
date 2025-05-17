@@ -33,8 +33,8 @@ int main() {
     string str;
     getline(cin, str);
 
-    int distinct = solve(str);
-    cout << distinct << '\n';
+    int result = solve(str);
+    cout << result << '\n';
 
     return 0;
 }
