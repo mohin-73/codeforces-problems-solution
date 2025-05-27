@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
 
 using namespace std;
 
@@ -15,9 +16,9 @@ int main() {
     cin >> n;
 
     int sum_x = 0, sum_y = 0, sum_z = 0;
+    int x, y, z;
 
-    while (n--) {
-        int x, y, z;
+    for (int i = 0; i < n; ++i) {
         cin >> x >> y >> z;
         sum_x += x;
         sum_y += y;
