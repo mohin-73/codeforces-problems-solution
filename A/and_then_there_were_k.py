@@ -1,12 +1,14 @@
 def main():
     t = int(input())
+
     for _ in range(t):
-        t = int(input())
-        p = 0
-        while t:
+        n = int(input())
+        p = -1
+        while n:
             p += 1
-            t >>= 1
-        print(int(pow(2, p - 1) - 1))
+            n >>= 1
+        print((2 ** p) - 1)
+
 
 if __name__ == "__main__":
     main()
