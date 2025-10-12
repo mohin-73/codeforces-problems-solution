@@ -4,16 +4,15 @@ def main():
     for _ in range(t):
         n, m = map(int, input().split())
         arr = list(map(int, input().split()))
-        check = ["B"] * m
-
+        array = ["B"] * m
         for j in arr:
             j, k = min(j - 1, m - j), max(j - 1, m - j)
-            if check[j] == "B":
-                check[j] = "A"
+            if array[j] == "B":
+                array[j] = "A"
             else:
-                check[k] = "A"
-                
-        print(*check, sep="")
+                array[k] = "A"
+        print(*array, sep="")
+
 
 if __name__ == "__main__":
     main()
