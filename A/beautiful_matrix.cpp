@@ -2,11 +2,11 @@
 #include <cmath>
 
 int main() {
-    int row, col;
+    int row{}, col{};
 
     for (int i = 1; i <= 5; i++) {
         for (int j = 1; j <= 5; j++) {
-            int x;
+            int x{};
             std::cin >> x;
             if (x == 1) {
                 row = i;
