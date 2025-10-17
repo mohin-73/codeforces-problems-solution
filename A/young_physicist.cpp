@@ -1,13 +1,13 @@
 #include <iostream>
 
 int main() {
-    int n;
+    int n{};
     std::cin >> n;
 
-    int a = 0, b = 0, c = 0;
+    int a{}, b{}, c{};
 
     for (int i = 0; i < n; i++) {
-        int x, y, z;
+        int x{}, y{}, z{};
         std::cin >> x >> y >> z;
         a += x;
         b += y;
