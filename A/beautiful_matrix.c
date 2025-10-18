@@ -15,8 +15,7 @@ int main(void) {
         }
     }
 
-    int dist = abs(row - 3) + abs(col - 3);
-    printf("%d\n", dist);
+    printf("%d\n", abs(row - 3) + abs(col - 3));
 
     return 0;
 }

@@ -15,8 +15,7 @@ int main() {
         }
     }
 
-    int dis = std::abs(row - 3) + std::abs(col - 3);
-    std::cout << dis << '\n';
+    std::cout << std::abs(row - 3) + std::abs(col - 3) << '\n';
 
     return 0;
 }
