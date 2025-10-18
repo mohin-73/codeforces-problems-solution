@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     n = int(input())
     a = b = c = 0
 
