@@ -3,7 +3,7 @@ def main() -> None:
 
     for i in range(5):
         x = list(map(int, input().split()))
-        
+
         for j in range(5):
             if x[j]:
                 row = i + 1
@@ -14,3 +14,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
