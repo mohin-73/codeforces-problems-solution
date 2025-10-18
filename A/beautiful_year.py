@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     n = int(input())
 
     while True:
