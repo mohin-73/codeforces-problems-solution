@@ -2,7 +2,7 @@
 #include <string>
 
 int main() {
-    std::ios::sync_with_stdio(false);
+    std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
     int t;
@@ -18,6 +18,7 @@ int main() {
         }
 
         int m = n / k;
+        
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < m; ++j) {
                 std::cout << grid[i * k][j * k];
