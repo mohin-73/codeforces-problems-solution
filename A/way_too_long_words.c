@@ -4,15 +4,15 @@
 int main() {
     int n;
     scanf("%d", &n);
-    while (n--) {
+    for (int i = 0; i < n; ++i) {
         char str[101];
         scanf("%s", str);
         if (strlen(str) <= 10) {
             printf("%s\n", str);
             continue;
         }
-        size_t len = strlen(str);
-        printf("%c%zu%c\n", str[0], len - 2, str[len - 1]);
+        size_t l = strlen(str);
+        printf("%c%zu%c\n", str[0], l - 2, str[l - 1]);
     }
     return 0;
 }
