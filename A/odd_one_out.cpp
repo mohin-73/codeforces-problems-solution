@@ -24,10 +24,10 @@ int main() {
 ─────────────────────────────────────────────
     1. x ^ x = 0  
     → Any number XOR itself becomes 0.
-─────────────────────────────────────────────
+
     2. x ^ 0 = x  
     → XOR with 0 keeps the number unchanged.
-─────────────────────────────────────────────
+
     3. XOR is Commutative and Associative  
     → a ^ b ^ c = b ^ c ^ a = (a ^ b) ^ c
 ─────────────────────────────────────────────
