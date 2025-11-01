@@ -2,10 +2,6 @@
 
 using namespace std;
 
-int solve(int a, int b, int c) {
-    return (a ^ b ^ c);
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -13,7 +9,7 @@ int main() {
     cin >> t;
     while (t--) {
         cin >> a >> b >> c;
-        cout << solve(a, b, c) << '\n';
+        cout << (a ^ b ^ c) << '\n';
     }
     return 0;
 }
