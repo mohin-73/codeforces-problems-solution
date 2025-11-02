@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void solve() {
+char solve() {
     int missing;
     for (int i = 0; i < 3; ++i) {
         string str;
@@ -10,16 +10,28 @@ void solve() {
         if (str.find('?') != string::npos) {
             int mask = 0;
             for (char ch : str) {
-                if (ch == 'A') mask |= 1;
-                else if (ch == 'B') mask |= 2;
-                else if (ch == 'C') mask |= 4;
+                if (ch == 'A') {
+                    mask |= 1;
+                }
+                else if (ch == 'B') {
+                    mask |= 2;
+                }
+                else if (ch == 'C') {
+                    mask |= 4;
+                }
             }
             missing = 7 ^ mask;
         }
     }
-    if (missing == 1) cout << 'A' << '\n';
-    else if (missing == 2) cout << 'B' << '\n';
-    else cout << 'C' << '\n';
+    if (missing == 1) {
+        return 'A';
+    }
+    else if (missing == 2) {
+        return 'B';
+    }
+    else {
+        return 'C';
+    }
 }
 
 int main() {
@@ -28,7 +40,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        solve();
+        cout << solve() << '\n';
     }
     return 0;
 }
