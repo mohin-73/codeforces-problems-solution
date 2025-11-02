@@ -19,7 +19,7 @@ int main() {
     XOR (Exclusive OR) — Key Properties
 ─────────────────────────────────────────────
     1. x ^ x = 0  
-    → Any number XOR itself becomes 0.
+    → Any number XOR itself becomes 0. 
 
     2. x ^ 0 = x  
     → XOR with 0 keeps the number unchanged.
