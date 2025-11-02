@@ -3,26 +3,24 @@
 using namespace std;
 
 char solve() {
-    int missing;
+    string s, str;
     for (int i = 0; i < 3; ++i) {
-        string str;
-        cin >> str;
-        if (str.find('?') != string::npos) {
-            int mask = 0;
-            for (char ch : str) {
-                if (ch == 'A') {
-                    mask |= 1;
-                }
-                else if (ch == 'B') {
-                    mask |= 2;
-                }
-                else if (ch == 'C') {
-                    mask |= 4;
-                }
-            }
-            missing = 7 ^ mask;
+        cin >> s;
+        if (s.find('?') != string::npos) {
+            str = s;
         }
     }
+    int mask = 0, missing;
+    for (char ch : str) {
+        if (ch == 'A') {
+            mask |= 1;
+        } else if (ch == 'B') {
+            mask |= 2;
+        } else if (ch == 'C') {
+            mask |= 4;
+        }
+    }
+    missing = mask ^ 7;
     if (missing == 1) {
         return 'A';
     }
