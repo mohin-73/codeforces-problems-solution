@@ -3,7 +3,7 @@
 using namespace std;
 
 void solve() {
-    int missing = 0;
+    int missing;
     for (int i = 0; i < 3; ++i) {
         string str;
         cin >> str;
