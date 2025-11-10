@@ -8,13 +8,9 @@ void solve() {
     cin >> n;
     for (int i = 0; i < n; ++i) {
         cin >> m >> v;
-        if (v == 1) {
-            a = min(a, m);
-        } else if (v == 10) {
-            b = min(b, m);
-        } else if (v == 11) {
-            c = min(c, m);
-        }
+        a = v == 1 ? min(a, m) : a;
+        b = v == 10 ? min(b, m) : b;
+        c = v == 11 ? min(c, m) : c;
     }
     if (c == INT_MAX && (a == INT_MAX || b == INT_MAX)) {
         cout << -1 << '\n';
@@ -37,4 +33,3 @@ int main() {
     }
     return 0;
 }
-
