@@ -9,13 +9,12 @@ void solve() {
     for (int i = 0; i < n; ++i) {
         cin >> num;
         num % 2 ? ++odd : ++even;
-    } 
-    if (odd == 0 || (x % 2 == 0 && even == 0)) {
-        cout << "No\n";
-    } else if (odd % 2 == 0 && x == n) {
-        cout << "No\n";
-    } else {
+    }
+    odd -= !(odd % 2);
+    if (odd >= 1 && odd + even >= x) {
         cout << "Yes\n";
+    } else {
+        cout << "No\n";
     }
 }
 
