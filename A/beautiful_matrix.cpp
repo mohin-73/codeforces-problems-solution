@@ -1,21 +1,21 @@
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
-int main() {
-    int row{}, col{};
+using namespace std;
 
+void solve() {
+    int v, m;
     for (int i = 1; i <= 5; i++) {
         for (int j = 1; j <= 5; j++) {
-            int x{};
-            std::cin >> x;
-            if (x == 1) {
-                row = i;
-                col = j;
+            cin >> v;
+            if (v == 1) {
+                m = abs(i - 3) + abs(j - 3);
             }
         }
     }
+    cout << m << '\n';
+}
 
-    std::cout << std::abs(row - 3) + std::abs(col - 3) << '\n';
-
+int main() {
+    solve();
     return 0;
 }
