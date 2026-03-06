@@ -1,18 +1,5 @@
-def main() -> None:
-    n = int(input())
-    a = b = c = 0
-
-    for _ in range(n):
-        x, y, z = map(int, input().split())
-        a += x
-        b += y
-        c += z
-
-    if a == 0 and b == 0 and c == 0:
-        print("YES")
-    else:
-        print("NO")
-
-
-if __name__ == "__main__":
-    main()
+x = y = z = 0
+for _ in range(int(input())):
+    fx, fy, fz = map(int, input().split())
+    x += fx; y += fy; z += fz
+print("YES" if x == y == z == 0 else "NO")

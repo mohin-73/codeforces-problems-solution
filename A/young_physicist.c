@@ -1,24 +1,17 @@
 #include <stdio.h>
 
-int main(void) {
-    int n;
+void solve() {
+    int n, x, y, z, fx, fy, fz;
+    x = y = z = 0;
     scanf("%d", &n);
-
-    int a = 0, b = 0, c = 0;
-
-    for (int i = 0; i < n; i++) {
-        int x, y, z;
-        scanf("%d %d %d", &x, &y, &z);
-        a += x;
-        b += y;
-        c += z;
+    while (n--) {
+        scanf("%d %d %d", &fx, &fy, &fz);
+        x += fx; y += fy; z += fz;
     }
+    printf((x || y || z) ? "NO\n" : "YES\n");
+}
 
-    if (a == 0 && b == 0 && c == 0) {
-        printf("YES\n");
-    } else {
-        printf("NO\n");
-    }
-
+int main(void) {
+    solve();
     return 0;
 }

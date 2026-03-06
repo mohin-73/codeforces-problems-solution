@@ -1,24 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void solve() {
+    int n, x, y, z, fx, fy, fz;
+    x = y = z = 0;
+    cin >> n;
+    while (n--) {
+        cin >> fx >> fy >> fz;
+        x += fx; y += fy; z += fz;
+    }
+    cout << (x || y || z ? "NO\n" : "YES\n");
+}
 
 int main() {
-    int n{};
-    std::cin >> n;
-
-    int a{}, b{}, c{};
-
-    for (int i = 0; i < n; i++) {
-        int x{}, y{}, z{};
-        std::cin >> x >> y >> z;
-        a += x;
-        b += y;
-        c += z;
-    }
-
-    if (a == 0 && b == 0 && c == 0) {
-        std::cout << "YES\n";
-    } else {
-        std::cout << "NO\n";
-    }
-
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    solve();
     return 0;
 }
