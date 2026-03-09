@@ -6,15 +6,11 @@ void solve() {
     int n, m = 0;
     string s;
     cin >> n >> s;
-    stack<char> stk;
+    stack<char> op;
     for (char c : s) {
-        if (c == '(') {
-            stk.push(c);
-        } else if (stk.empty()) {
-            ++m;
-        } else {
-            stk.pop();
-        }
+        if (c == '(') op.push(c);
+        else if (op.empty()) ++m;
+        else op.pop();
     }
     cout << m << '\n';
 }
