@@ -5,7 +5,7 @@ using namespace std;
 void solve() {
     short n;
     cin >> n;
-    cout << (n % 10) + ((n / 10) % 10) << '\n';
+    cout << n % 10 + n / 10 << '\n';
 }
 
 int main() {
