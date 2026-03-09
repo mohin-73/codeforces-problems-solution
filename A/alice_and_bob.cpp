@@ -2,21 +2,20 @@
 
 using namespace std;
 
-int solve() {
-    int n, a, v;
+void solve() {
+    int n, a;
     cin >> n >> a;
-    int x = a + 1;
-    int y = a - 1;
-    int c1 = 0, c2 = 0;
+    int v, x, y, l = 0, r = 0;
     for (int i = 0; i < n; ++i) {
         cin >> v;
-        if (abs(v - x) < abs(v - a)) {
-            c1 += 1;
-        } else if (abs(v - y) < abs(v - a)) {
-            c2 += 1;
+        if (v == a) {
+            continue;
         }
+        x = abs(v - a - 1);
+        y = abs(v - a + 1);
+        x > y ? ++l : ++r;
     }
-    return c1 > c2 ? x : y;
+    cout << (l > r ? --a : ++a) << '\n';
 }
 
 int main() {
@@ -25,7 +24,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        cout << solve() << '\n';
+        solve();
     }
     return 0;
 }
