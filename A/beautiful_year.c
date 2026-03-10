@@ -1,29 +1,17 @@
 #include <stdio.h>
-#include <stdbool.h>
 
-int main(void) {
+int main() {
     int n;
     scanf("%d", &n);
-
-    while(++n) {
+    while (++n) {
         int t = n, arr[10] = {0};
-        bool flag = true;
-
-        while(t) {
-            if (arr[t % 10]) {
-                flag = false;
-                break;
-            }
-            arr[t % 10] = true;
+        while (t && !arr[t % 10]) {
+            arr[t % 10] = 1;
             t /= 10;
         }
-
-        if (flag) {
+        if (t == 0) {
             break;
         }
     }
-
-    printf("%d\n", n);
-
-    return 0;
+    printf("%d", n);
 }

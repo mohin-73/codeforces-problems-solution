@@ -1,28 +1,19 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
-    int n{};
-    std::cin >> n;
-
-    while(++n) {
-        int t = n, arr[10] = {};
-        bool flag = true;
-
-        while(t) {
-            if (arr[t % 10]) {
-                flag = false;
-                break;
-            }
-            arr[t % 10] = true;
-            t /= 10;
-        }
-
-        if (flag) {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    cin >> n;
+    while (++n) {
+        string s = to_string(n);
+        set<char> st(s.begin(), s.end());
+        if (st.size() == s.size()) {
             break;
         }
     }
-
-    std::cout << n << '\n';
-
+    cout << n << '\n';
     return 0;
 }
