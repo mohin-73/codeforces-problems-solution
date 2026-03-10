@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void solve() {
+int main(void) {
     int v, m;
     for (int i = 1; i <= 5; ++i) {
         for (int j = 1; j <= 5; ++j) {
@@ -12,9 +12,5 @@ void solve() {
         }
     }
     printf("%d\n", m);
-}
-
-int main(void) {
-    solve();
     return 0;
 }

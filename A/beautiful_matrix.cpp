@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void solve() {
+int main() {
     int v, m;
     for (int i = 1; i <= 5; ++i) {
         for (int j = 1; j <= 5; ++j) {
@@ -13,11 +13,6 @@ void solve() {
         }
     }
     cout << m << '\n';
-}
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    solve();
     return 0;
 }
+
