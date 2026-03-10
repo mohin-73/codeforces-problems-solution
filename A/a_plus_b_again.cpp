@@ -3,7 +3,7 @@
 using namespace std;
 
 void solve() {
-    short n;
+    int n;
     cin >> n;
     cout << n % 10 + n / 10 << '\n';
 }
@@ -11,7 +11,7 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    short t;
+    int t;
     cin >> t;
     while (t--) {
         solve();
