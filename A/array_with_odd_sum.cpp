@@ -3,12 +3,12 @@
 using namespace std;
 
 void solve() {
-    int n, x;
+    int n, a;
     cin >> n;
     int odd = 0;
     for (int i = 0; i < n; ++i) {
-        cin >> x;
-        odd += x % 2;
+        cin >> a;
+        odd += a % 2;
     }
     if (odd == 0 || (odd == n && !(n % 2))) {
         cout << "NO\n";
