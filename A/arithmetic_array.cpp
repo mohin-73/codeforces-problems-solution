@@ -1,29 +1,30 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void solve() {
+    int n, a, s = 0;
+    cin >> n;
+    for (int i = 0; i < n; ++i) {
+        cin >> a;
+        s += a;
+    }
+    if (n == s) {
+        cout << 0 << '\n';
+    } else if (s < 0 || n > s) {
+        cout << 1 << '\n';
+    } else {
+        cout << s - n << '\n';
+    }
+}
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-    int t{};
-    std::cin >> t;
-
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
     while (t--) {
-        int n{}, x{}, sum{};
-        std::cin >> n;
-
-        for (int i = 0; i < n; ++i) {
-            std::cin >> x;
-            sum += x;
-        }
-
-        if (n == sum) {
-            std::cout << 0 << '\n';
-        } else if (sum < 0 || n > sum) {
-            std::cout << 1 << '\n';
-        } else {
-            std::cout << sum - n << '\n';
-        }
+        solve();
     }
-
     return 0;
 }
