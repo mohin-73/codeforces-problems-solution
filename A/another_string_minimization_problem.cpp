@@ -9,15 +9,9 @@ void solve() {
     for (int i = 0; i < n; ++i) {
         cin >> a;
         b = m - a--;
-        if (a < b && s[a] == 'B') {
-            s[a] = 'A';
-        } else if (b < a && s[b] == 'B') {
-            s[b] = 'A';
-        } else if (s[a] == 'B') {
-            s[a] = 'A';
-        } else {
-            s[b] = 'A';
-        }
+        int l = min(a, b);
+        int r = max(a, b);
+        s[l] == 'B' ? s[l] = 'A' : s[r] = 'A';
     }
     cout << s << '\n';
 }
