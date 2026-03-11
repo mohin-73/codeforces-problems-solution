@@ -4,7 +4,7 @@ void solve() {
     int n, a;
     scanf("%d", &n);
     int s = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; ++i) {
         scanf("%d", &a);
         s += a;
     }
