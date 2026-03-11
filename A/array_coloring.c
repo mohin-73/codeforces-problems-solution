@@ -8,7 +8,6 @@ void solve() {
         scanf("%d", &a);
         s += a;
     }
-
     if (s % 2 == 0) {
         printf("YES\n");
     } else {
