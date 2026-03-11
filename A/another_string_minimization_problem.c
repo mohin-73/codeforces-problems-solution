@@ -4,7 +4,7 @@ void solve() {
     int n, m, a, b;
     scanf("%d %d", &n, &m);
     char s[m + 1];
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < m; ++i) {
         s[i] = 'B';
     }
     s[m] = '\0';
