@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int main() {
-    int n, ans = 0;
+int main(void) {
+    int n, x = 0;
     scanf("%d", &n);
+    char s[4];
     for (int i = 0; i < n; ++i) {
-        char s[4];
         scanf("%s", s);
-        ans += (s[0] == '+' || s[2] == '+') ? 1 : -1;
+        x += (s[0] == '+' || s[2] == '+') ? 1 : -1;
     }
-    printf("%d\n", ans);
+    printf("%d\n", x);
     return 0;
 }
