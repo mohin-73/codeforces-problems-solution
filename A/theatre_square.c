@@ -5,7 +5,6 @@ int main(void) {
     scanf("%d %d %d", &n, &m, &a);
     n = (n + a - 1) / a;
     m = (m + a - 1) / a;
-    long long f = 1LL * n * m;
-    printf("%lld\n", f);
+    printf("%lld\n", 1LL * n * m);
     return 0;
 }
