@@ -1,25 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-    int cost[4] = {};
-    for (int i = 0; i < 4; ++i) {
-        std::cin >> cost[i];
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int a[4];
+    cin >> a[0] >> a[1] >> a[2] >> a[3];
+    string str;
+    cin >> str;
+    int w = 0;
+    for (char ch : str) {
+        w += a[ch - '1'];
     }
-
-    std::string str{};
-    std::cin >> str;
-
-    int ans{};
-
-    for (int i = 0; i < str.length(); ++i) {
-        int k = str[i] - 49;
-        ans += cost[k];
-    }
-
-    std::cout << ans << '\n';
-
+    cout << w << '\n';
     return 0;
 }
