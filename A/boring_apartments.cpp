@@ -1,29 +1,23 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void solve() {
+    int x;
+    cin >> x;
+    int p = (x % 10 - 1) * 10;
+    int d = to_string(x).length();
+    p += (d * (d + 1)) / 2;
+    cout << p << '\n';
+}
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-    int t{};
-    std::cin >> t;
-
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
     while (t--) {
-        int n{};
-        std::cin >> n;
-
-        int k = n % 10;
-        int ans = (k - 1) * 10;
-        
-        int d{};
-        while (n) {
-            ++d;
-            n /= 10;
-        }
-
-        ans = ans + ((d * (d + 1)) / 2);
-
-        std::cout << ans << '\n';
+        solve();
     }
-
     return 0;
 }
