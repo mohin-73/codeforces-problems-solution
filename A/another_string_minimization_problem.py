@@ -1,4 +1,7 @@
-for _ in range(int(input())):
+import sys
+input = sys.stdin.readline
+
+def solve():
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
     s = ['B'] * m
@@ -8,3 +11,6 @@ for _ in range(int(input())):
         l, r = min(x, y), max(x, y)
         s[l if s[l] == 'B' else r] = 'A'
     print(''.join(s))
+
+for _ in range(int(input())):
+    solve()
