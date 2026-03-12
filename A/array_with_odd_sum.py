@@ -1,4 +1,7 @@
-for _ in range(int(input())):
+import sys
+input = sys.stdin.readline
+
+def solve():
     n = int(input())
     a = list(map(int, input().split()))
     odd = sum(x % 2 for x in a)
@@ -6,3 +9,6 @@ for _ in range(int(input())):
         print("NO")
     else:
         print("YES")
+
+for _ in range(int(input())):
+    solve()
