@@ -8,12 +8,8 @@ def solve():
     for v in arr:
         if v == a:
             continue
-        x = abs(v - a - 1)
-        y = abs(v - a + 1)
-        if x > y:
-            l += 1
-        else:
-            r += 1
+        x, y = abs(v - a - 1), abs(v - a + 1)
+        l, r = (l + 1, r) if x > y else (l, r + 1)
     print(a - 1 if l > r else a + 1)
 
 for _ in range(int(input())):
