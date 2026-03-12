@@ -8,6 +8,5 @@ def solve():
     p += (d * (d + 1)) // 2
     print(p)
 
-t = int(input())
-for _ in range(t):
+for _ in range(int(input())):
     solve()
