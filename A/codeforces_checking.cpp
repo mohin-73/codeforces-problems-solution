@@ -1,24 +1,22 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void solve() {
+    string cf = "codeforces";
+    char ch;
+    cin >> ch;
+    bool found = (find(cf.begin(), cf.end(), ch) != cf.end());
+    cout << (found ? "YES\n" : "NO\n");
+}
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-    int t{};
-    std::cin >> t;
-
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
     while (t--) {
-        char ch;
-        std::string cf = "codeforces";
-        std::cin >> ch;
-
-        if (std::find(cf.begin(), cf.end(), ch) != cf.end()) {
-            std::cout << "YES\n";
-        } else {
-            std::cout << "NO\n";
-        }
+        solve();
     }
-    
     return 0;
 }
