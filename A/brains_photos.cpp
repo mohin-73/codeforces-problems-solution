@@ -1,26 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-    int n{}, m{};
-    std::cin >> n >> m;
-
-    char color;
-    bool flag = true;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n, m;
+    cin >> n >> m;
+    char c;
+    bool bw = true;
     for (int i = 0; i < n * m; ++i) {
-        std::cin >> color;
-        if (color == 'C' || color == 'M' || color == 'Y') {
-            flag = false;
-        }
+        cin >> c;
+        bw &= !(c == 'C' || c == 'M' || c == 'Y');
     }
-
-    if (flag) {
-        std::cout << "#Black&White\n";
-    } else {
-        std::cout << "#Color\n";
-    }
-
+    cout << (bw ? "#Black&White\n" : "#Color\n");
     return 0;
 }
