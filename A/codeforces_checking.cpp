@@ -6,8 +6,11 @@ void solve() {
     string cf = "codeforces";
     char ch;
     cin >> ch;
-    bool found = (find(cf.begin(), cf.end(), ch) != cf.end());
-    cout << (found ? "YES\n" : "NO\n");
+    if (find(cf.begin(), cf.end(), ch) != cf.end()) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
 }
 
 int main() {
