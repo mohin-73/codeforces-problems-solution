@@ -6,11 +6,13 @@ void solve() {
     string cf = "codeforces";
     char ch;
     cin >> ch;
-    if (find(cf.begin(), cf.end(), ch) != cf.end()) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
+    for (char c : cf) {
+        if (c == ch) {
+            cout << "YES\n";
+            return;
+        }
     }
+    cout << "NO\n";
 }
 
 int main() {
