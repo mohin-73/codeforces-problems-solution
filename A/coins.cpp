@@ -1,22 +1,24 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void solve() {
+    long long n, k;
+    cin >> n >> k;
+    if (n % k == 0 || (n - k) % 2 == 0 || n % 2 == 0) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+}
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-    int t{};
-    std::cin >> t;
-
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
     while (t--) {
-        long long n{}, k{};
-        std::cin >> n >> k;
-
-        if (n % k == 0 || (n - k) % 2 == 0 || n % 2 == 0) {
-            std::cout << "YES\n";
-        } else {
-            std::cout << "NO\n";
-        }
+        solve();
     }
-
     return 0;
 }
