@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void solve() {
+int main(void) {
     int n, x, y, z, fx, fy, fz;
     x = y = z = 0;
     scanf("%d", &n);
@@ -9,9 +9,4 @@ void solve() {
         x += fx; y += fy; z += fz;
     }
     printf((x || y || z) ? "NO\n" : "YES\n");
-}
-
-int main(void) {
-    solve();
-    return 0;
 }
