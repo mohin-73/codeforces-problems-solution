@@ -1,10 +1,8 @@
-#include <bits/stdc++.h>
-
-using namespace std;
+#include <stdio.h>
 
 void solve() {
     long long a, b, n;
-    cin >> a >> b >> n;
+    scanf("%lld %lld %lld", &a, &b, &n);
     int ops = 0;
     while (a <= n && b <= n) {
         if (a >= b) {
@@ -14,14 +12,12 @@ void solve() {
         }
         ++ops;
     }
-    cout << ops << '\n';
+    printf("%d\n", ops);
 }
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main(void) {
     int t;
-    cin >> t;
+    scanf("%d", &t);
     while (t--) {
         solve();
     }
