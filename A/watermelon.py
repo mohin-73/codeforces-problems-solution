@@ -1,2 +1,3 @@
 w = int(input())
-print("YES" if not(w % 2) and w > 2 else "NO")
+f = w % 2 == 0 and w > 2
+print("YES" if f else "NO")

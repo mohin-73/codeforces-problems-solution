@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-int main() {
+int main(void) {
     int w;
     scanf("%d", &w);
-    puts((!(w % 2) && w > 2) ? "YES" : "NO");
+    bool f = !(w % 2) && w > 2;
+    puts(f ? "YES" : "NO");
     return 0;
 }

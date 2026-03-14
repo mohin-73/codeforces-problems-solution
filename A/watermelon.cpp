@@ -7,6 +7,7 @@ int main() {
     cin.tie(nullptr);
     int w;
     cin >> w;
-    cout << (!(w % 2) && w > 2 ? "YES\n" : "NO\n");
+    bool f = !(w % 2) && w > 2;
+    cout << (f ? "YES\n" : "NO\n");
     return 0;
 }
