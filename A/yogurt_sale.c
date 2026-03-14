@@ -1,23 +1,19 @@
-#include <bits/stdc++.h>
-
-using namespace std;
+#include <stdio.h>
 
 void solve() {
     int n, a, b, c = 0;
-    cin >> n >> a >> b;
+    scanf("%d %d %d", &n, &a, &b);
     if (b < 2 * a) {
         c += b * (n / 2);
         n = n % 2;
     }
     c += n * a;
-    cout << c << '\n';
+    printf("%d\n", c);
 }
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main(void) {
     int t;
-    cin >> t;
+    scanf("%d", &t);
     while (t--) {
         solve();
     }
