@@ -1,24 +1,23 @@
-#include <iostream>
-#include <string>
-#include <utility>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
-    int n{}, t{};
-    std::cin >> n >> t;
+    int n, t;
+    string str;
 
-    std::string str{};
-    std::cin >> str;
+    cin >> n >> t >> str;
 
-    for (int i = 0; i < t; i++) {
-        for (int j = 0; j < n - 1; j++) {
-            if (str[j] == 'B' && str[j + 1] == 'G') {
-                std::swap(str[j], str[j + 1]);
-                j++;
+    while (t--) {
+        for (int i = 0; i < n - 1; ++i) {
+            if (str[i] == 'B' && str[i + 1] == 'G') {
+                swap(str[i], str[i + 1]);
+                i += 1;
             }
         }
     }
 
-    std::cout << str << '\n';
+    cout << str << '\n';
 
     return 0;
 }
