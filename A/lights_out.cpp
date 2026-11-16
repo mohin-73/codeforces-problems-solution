@@ -8,16 +8,16 @@ void solve() {
 
     for (int i = 1; i <= 3; ++i) {
         for (int j = 1; j <= 3; ++j) {
-            int p;
-            cin >> p;
+            int press;
+            cin >> press;
 
-            if (p % 2) {
-                grid[i][j] = !grid[i][j];
-                grid[i + 1][j] = !grid[i + 1][j];
-                grid[i - 1][j] = !grid[i - 1][j];
-                grid[i][j + 1] = !grid[i][j + 1];
-                grid[i][j - 1] = !grid[i][j - 1];
-            }
+            int toggle = press % 2;
+
+            grid[i][j] ^= toggle;
+            grid[i + 1][j] ^= toggle;
+            grid[i - 1][j] ^= toggle;
+            grid[i][j + 1] ^= toggle;
+            grid[i][j - 1] ^= toggle;
         }
     }
 
