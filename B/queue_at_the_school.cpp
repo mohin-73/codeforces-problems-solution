@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main() {
+void solve() {
     int n, t;
     string str;
 
@@ -18,6 +18,13 @@ int main() {
     }
 
     cout << str << '\n';
+}
 
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    solve();
+ 
     return 0;
 }
