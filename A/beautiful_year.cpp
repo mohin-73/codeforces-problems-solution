@@ -2,18 +2,35 @@
 
 using namespace std;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    cin >> n;
-    while (++n) {
-        string s = to_string(n);
-        set<char> st(s.begin(), s.end());
-        if (st.size() == s.size()) {
+void solve() {
+    int year;
+
+    cin >> year;
+
+    while (++year) {
+        int temp = year;
+        int d = 0;
+        set<int> digits;
+
+        while (temp) {
+            digits.insert(temp % 10);
+            temp /= 10;
+            d += 1;
+        }
+
+        if (digits.size() == d) {
             break;
         }
     }
-    cout << n << '\n';
+
+    cout << year << '\n';
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    solve();
+
     return 0;
 }
