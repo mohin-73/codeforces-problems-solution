@@ -1,25 +1,25 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
-    std::string str{}, ans{};
-    std::cin >> str;
+    string str, ans;
 
-    size_t len = str.length();
+    cin >> str;
 
-    for (size_t i = 0; i < len; i++) {
+    for (int i = 0; i < str.length(); ++i) {
         if (str[i] == '.') {
-            ans += '0';
-        } else if (str[i + 1] == '-') {
-            ans += '2';
+            ans.push_back('0');
+        } else if (str[i + 1] == '.') {
+            ans.push_back('1');
             i += 1;
         } else {
-            ans += '1';
+            ans.push_back('2');
             i += 1;
         }
     }
 
-    std::cout << ans << '\n';
+    cout << ans << '\n';
 
     return 0;
 }
