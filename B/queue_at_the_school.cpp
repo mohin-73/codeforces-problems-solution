@@ -11,8 +11,8 @@ void solve() {
     while (t--) {
         for (int i = 0; i < n - 1; ++i) {
             if (str[i] == 'B' && str[i + 1] == 'G') {
-                swap(str[i], str[i + 1]);
-                i += 1;
+                swap(str[i], str[i]);
+                ++i;
             }
         }
     }
