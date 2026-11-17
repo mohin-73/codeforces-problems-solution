@@ -3,22 +3,21 @@
 using namespace std;
 
 void solve() {
-    string str1, str2;
+    string num1, num2;
 
-    cin >> str1 >> str2;
+    cin >> num1 >> num2;
 
-    string str;
-    int len = str1.length();
+    string ans;
 
-    for (int i = 0; i < len; ++i) {
-        if (str1[i] == str2[i]) {
-            str.push_back('0');
+    for (int i = 0; i < num1.length(); ++i) {
+        if (num1[i] == num2[i]) {
+            ans.push_back('0');
         } else {
-            str.push_back('1');
+            ans.push_back('1');
         }
     }
         
-    cout << str << '\n';
+    cout << ans << '\n';
 }
 
 int main() {
