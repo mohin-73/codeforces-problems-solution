@@ -10,9 +10,9 @@ void solve() {
 
     for (char ch : word) {
         if (ch >= 'a') {
-            low += 1;
+            ++low;
         } else {
-            up += 1;
+            ++up;
         }
     }
 
