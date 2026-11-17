@@ -12,10 +12,10 @@ void solve() {
             ans.push_back('0');
         } else if (str[i + 1] == '.') {
             ans.push_back('1');
-            i += 1;
+            ++i;
         } else {
             ans.push_back('2');
-            i += 1;
+            ++i;
         }
     }
 
