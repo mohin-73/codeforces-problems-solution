@@ -9,16 +9,16 @@ void solve() {
 
     while (++year) {
         int temp = year;
-        int d = 0;
-        set<int> digits;
+        int digits = 0;
+        set<int> st;
 
         while (temp) {
-            digits.insert(temp % 10);
+            st.insert(temp % 10);
             temp /= 10;
-            d += 1;
+            ++digits;
         }
 
-        if (digits.size() == d) {
+        if (st.size() == digits) {
             break;
         }
     }
