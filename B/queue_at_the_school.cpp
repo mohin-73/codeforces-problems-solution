@@ -9,12 +9,17 @@ void solve() {
     cin >> n >> t >> str;
 
     while (t--) {
-        for (int i = 0; i < n - 1; ++i) {
+        int i = 0;
+
+        while (i + 1 < str.length()) {
             if (str[i] == 'B' && str[i + 1] == 'G') {
-                swap(str[i], str[i]);
+                swap(str[i], str[i + 1]);
                 ++i;
             }
+            
+            ++i;
         }
+        
     }
 
     cout << str << '\n';
