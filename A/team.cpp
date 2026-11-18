@@ -11,7 +11,6 @@ void solve() {
 
     for (int i = 0; i < n; ++i) {
         cin >> a >> b >> c;
-        
         count += (a + b + c) > 1;
     }
     
