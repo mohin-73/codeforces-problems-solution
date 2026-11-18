@@ -11,7 +11,6 @@ void solve() {
     
     for (int i = 0; i < n; ++i) {
         cin >> a >> b;
-
         curr += b - a;
         cap = max(cap, curr);
     }
