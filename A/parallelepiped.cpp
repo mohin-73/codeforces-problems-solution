@@ -3,15 +3,15 @@
 using namespace std;
 
 void solve() {
-    int lw, hl, wh;
+    int ab, bc, ca;
 
-    cin >> lw >> hl >> wh;
+    cin >> ab >> bc >> ca;
 
-    int l = sqrt((lw * hl) / wh);
-    int h = sqrt((hl * wh) / lw);
-    int w = sqrt((wh * lw) / hl);
+    int a = sqrt((ab * ca) / bc);
+    int b = sqrt((ab * bc) / ca);
+    int c = sqrt((bc * ca) / ab);
 
-    cout << 4 * (l + h + w) << '\n';
+    cout << 4 * (a + b + c) << '\n';
 }
 
 int main() {
