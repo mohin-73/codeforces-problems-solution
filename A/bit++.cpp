@@ -2,16 +2,26 @@
 
 using namespace std;
 
+void solve() {
+    int n, x{};
+    string str;
+
+    cin >> n;
+
+    while (n--) {
+        cin >> str;
+        auto k = str.find('+');
+        k != string::npos ? ++x : --x;
+    }
+
+    cout << x << '\n';
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, x = 0;
-    cin >> n;
-    string s;
-    for (int i = 0; i < n; ++i) {
-        cin >> s;
-        x += (s[0] == '+' || s[2] == '+') ? 1 : -1;
-    }
-    cout << x << '\n';
+    
+    solve();
+
     return 0;
 }
