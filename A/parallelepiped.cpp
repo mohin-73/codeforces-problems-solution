@@ -3,13 +3,13 @@
 using namespace std;
 
 void solve() {
-    int ab, bc, ca;
+    int ab, bc, ac;
 
-    cin >> ab >> bc >> ca;
+    cin >> ab >> bc >> ac;
 
-    int a = sqrt((ab * ca) / bc);
-    int b = sqrt((ab * bc) / ca);
-    int c = sqrt((bc * ca) / ab);
+    int a = sqrt((ab * ac) / bc);
+    int b = sqrt((ab * bc) / ac);
+    int c = sqrt((bc * ac) / ab);
 
     cout << 4 * (a + b + c) << '\n';
 }
